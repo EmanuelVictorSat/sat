@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAT - Câmbio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cambio.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">SAT</a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cambio.html" aria-current="page">Câmbio</a></li>
+                <li><a href="emprestimo.html">Empréstimos</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn">Abrir conta</a>
+    </header>
+
+    <main>
+
+        <section id="cambio">
+
+            <div class="cambio-intro">
+                <p class="tag">Câmbio online</p>
+                <h1>Simule seu câmbio em segundos</h1>
+                <p class="lead">Veja a cotação do dia e descubra quanto você paga ou recebe antes de fechar a operação.</p>
+
+                <div class="cotacoes">
+                    <article class="cotacao">
+                        <span class="cotacao-moeda">USD</span>
+                        <strong class="cotacao-valor" id="cotacao-usd">--</strong>
+                        <span class="cotacao-var" id="var-usd"></span>
+                    </article>
+
+                    <article class="cotacao">
+                        <span class="cotacao-moeda">EUR</span>
+                        <strong class="cotacao-valor" id="cotacao-eur">--</strong>
+                        <span class="cotacao-var" id="var-eur"></span>
+                    </article>
+                </div>
+
+                <p class="status" id="status">Carregando cotações...</p>
+            </div>
+
+            <form class="simulador" id="form-simulador">
+                <h2>Simulador</h2>
+
+                <div class="operacao" role="group" aria-label="Tipo de operação">
+                    <button type="button" class="operacao-btn ativo" data-op="compra" aria-pressed="true">Comprar</button>
+                    <button type="button" class="operacao-btn" data-op="venda" aria-pressed="false">Vender</button>
+                </div>
+
+                <div class="campo">
+                    <label for="moeda">Moeda</label>
+                    <select id="moeda">
+                        <option value="USD">Dólar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" id="quantidade" min="1" step="any" placeholder="Ex: 100" inputmode="decimal">
+                </div>
+
+                <button type="submit" class="btn" id="simular">Simular</button>
+
+                <div id="resultado" class="resultado" aria-live="polite">
+                    <p class="resultado-vazio">Informe a quantidade para ver o resultado.</p>
+                </div>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SAT - Exchange Bank</p>
+    </footer>
+
+    <script src="js/cambio.js"></script>
+</body>
+</html>
