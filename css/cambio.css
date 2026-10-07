@@ -1,0 +1,225 @@
+/* Página de câmbio — carregar depois do style.css */
+
+#cambio {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6rem) var(--espaco);
+}
+
+header nav a[aria-current="page"] {
+  color: var(--limao);
+}
+
+/* ---------- Coluna da esquerda ---------- */
+.tag {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.9rem;
+  border: 1px solid var(--limao);
+  border-radius: 999px;
+  color: var(--limao);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cambio-intro h1 {
+  margin-bottom: 1.25rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.lead {
+  max-width: 42ch;
+  margin-bottom: 2.5rem;
+  color: var(--cinza);
+  font-size: 1.1rem;
+}
+
+.cotacoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cotacao {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--linha);
+  border-left: 4px solid var(--limao);
+  border-radius: 0.75rem;
+  background: #0d0d0d;
+}
+
+.cotacao-moeda {
+  color: var(--cinza);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+}
+
+.cotacao-valor {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.cotacao-var {
+  font-size: 0.85rem;
+  color: var(--cinza);
+}
+
+.cotacao-var.sobe { color: var(--limao); }
+.cotacao-var.desce { color: #ff6b6b; }
+
+.status {
+  color: var(--cinza);
+  font-size: 0.85rem;
+}
+
+/* ---------- Simulador ---------- */
+.simulador {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--linha);
+  border-top: 6px solid var(--limao);
+  border-radius: 1.25rem;
+  background: #0d0d0d;
+}
+
+.simulador h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.operacao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.3rem;
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+}
+
+.operacao-btn {
+  padding: 0.6rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cinza);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.operacao-btn.ativo {
+  background: var(--limao);
+  color: var(--preto);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo label {
+  color: var(--cinza);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.campo select,
+.campo input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--linha);
+  border-radius: 0.75rem;
+  background: var(--preto);
+  color: var(--branco);
+  font: inherit;
+  font-size: 1.1rem;
+  transition: border-color 0.2s;
+}
+
+.campo select:focus,
+.campo input:focus {
+  border-color: var(--limao);
+  outline: none;
+}
+
+.simulador .btn {
+  width: 100%;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ---------- Resultado ---------- */
+.resultado {
+  padding: 1.25rem;
+  border: 1px dashed var(--linha);
+  border-radius: 0.75rem;
+}
+
+.resultado-vazio {
+  color: var(--cinza);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.resultado-rotulo {
+  color: var(--cinza);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.resultado-total {
+  margin: 0.25rem 0 1rem;
+  color: var(--limao);
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.resultado dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.resultado dt { color: var(--cinza); }
+.resultado dd { text-align: right; }
+
+.resultado .aviso {
+  margin-top: 1rem;
+  color: var(--cinza);
+  font-size: 0.75rem;
+}
+
+.resultado.erro {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 52rem) {
+  #cambio {
+    grid-template-columns: 1fr;
+  }
+}
