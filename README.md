@@ -43,7 +43,7 @@ Projeto desenvolvido individualmente.
 - **Repositório:** [SAT — Exchange Bank](https://github.com/EmanuelVictorSat/sat)
 - **Pitch:** pendente.
 - **Protótipos:** pendentes.
-- **Quadro Kanban:** Disponível no Github projects.
+- **Quadro Kanban:** [Disponível no Github projects](https://github.com/EmanuelVictorSat/sat/projects).
 - **Documentação complementar:** a organizar na pasta `docs/`.
 
 ## 5. Páginas / Telas da Aplicação (GitHub Pages)
