@@ -1,0 +1,28 @@
+{
+  "name": "sat",
+  "version": "1.0.0",
+  "description": "Sistema Web acadêmico para simulação de serviços financeiros, com foco em câmbio de moedas e empréstimos.",
+  "main": "index.js",
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmanuelVictorSat/sat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/EmanuelVictorSat/sat/issues"
+  },
+  "homepage": "https://github.com/EmanuelVictorSat/sat#readme",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.4"
+  }
+}
