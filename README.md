@@ -53,7 +53,7 @@ Telas existentes no projeto:
 - [Página inicial](index.html)
 - [Dashboard](dashboard.html)
 - [Câmbio](cambio.html)
-- [Empréstimos](emprestimo.html)
+- [Empréstimos](emprestimos.html)
 
 
 ## 6. Funcionalidades Planejadas (Features)
