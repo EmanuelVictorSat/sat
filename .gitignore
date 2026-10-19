@@ -1,0 +1,19 @@
+# Dependências e cache do Vite
+node_modules/
+.vite/
+.vite-temp/
+
+# Build
+dist/
+
+# Ambiente e logs
+.env
+.env.*
+*.log
+npm-debug.log*
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
