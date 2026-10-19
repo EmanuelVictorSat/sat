@@ -4,56 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAT - Exchange Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="font-sans antialiased">
 
-  <header>
-    <a href="#" class="logo">SAT</a>
-    <nav>
-      <ul>
-        <li><a href="#hero">Início</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contato">Contato</a></li>
+  <header class="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-b border-linha bg-preto px-[clamp(1.25rem,5vw,4rem)] py-4">
+    <a href="#" class="font-display text-2xl tracking-tight">SAT</a>
+
+    <nav aria-label="Navegação principal" class="order-3 w-full sm:order-none sm:w-auto">
+      <ul class="flex gap-5 sm:gap-8">
+        <li><a href="#hero" class="text-cinza transition-colors hover:text-limao">Início</a></li>
+        <li><a href="#servicos" class="text-cinza transition-colors hover:text-limao">Serviços</a></li>
+        <li><a href="#contato" class="text-cinza transition-colors hover:text-limao">Contato</a></li>
       </ul>
     </nav>
-    <a href="#" class="btn">Abrir conta</a>
+
+    <a href="#" class="inline-block rounded-full border-2 border-limao bg-limao px-6 py-3 font-semibold text-preto transition-colors hover:bg-transparent hover:text-limao">Abrir conta</a>
   </header>
 
   <main>
 
-    <section id="hero">
-      <h1>Exchange Bank</h1>
-      <p>Compre dólar com a cotação do dia e peça crédito sem sair do app.</p>
-      <a href="#" class="btn">Abrir conta</a>
-      <a href="#servicos" class="btn btn-secondary">Ver serviços</a>
+    <section id="hero" class="mx-auto max-w-6xl px-[clamp(1.25rem,5vw,4rem)] py-[clamp(4rem,12vw,9rem)]">
+      <h1 class="mb-6 max-w-[14ch] font-display text-[clamp(2.5rem,8vw,5.5rem)] leading-[1.05] tracking-tighter">Exchange Bank</h1>
+      <p class="mb-10 max-w-[40ch] text-xl text-cinza">Compre dólar com a cotação do dia e peça crédito sem sair do app.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#" class="inline-block rounded-full border-2 border-limao bg-limao px-6 py-3 font-semibold text-preto transition-colors hover:bg-transparent hover:text-limao">Abrir conta</a>
+        <a href="#servicos" class="inline-block rounded-full border-2 border-branco px-6 py-3 font-semibold text-branco transition-colors hover:bg-branco hover:text-preto">Ver serviços</a>
+      </div>
     </section>
 
-    <section id="servicos">
-      <h2>Serviços</h2>
+    <section id="servicos" class="bg-branco text-preto">
+      <div class="mx-auto max-w-6xl px-[clamp(1.25rem,5vw,4rem)] py-[clamp(3rem,8vw,6rem)]">
+        <h2 class="mb-4 font-display text-[clamp(1.75rem,4vw,2.75rem)] tracking-tight">Serviços</h2>
 
-      <article>
-        <h3>Câmbio de moeda</h3>
-        <p>Simule operações de câmbio de moedas de forma rápida e segura.</p>
-        <a href="cambio.html">Simule operação de Câmbio</a>
-      </article>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] items-start gap-6">
 
-      <article>
-        <h3>Empréstimo</h3>
-        <p>Serviço de simulação de empréstimo com acompanhamento de juros e parcelamento que cabe no seu bolso.</p>
-        <a href="#">Saiba mais</a>
-      </article>
+          <article class="flex flex-col items-start gap-3 rounded-2xl border-2 border-t-8 border-preto border-t-limao bg-branco p-8 transition-transform hover:-translate-y-1">
+            <h3 class="font-display text-2xl">Câmbio de moeda</h3>
+            <p class="text-neutral-700">Simule operações de câmbio de moedas de forma rápida e segura.</p>
+            <a href="cambio.html" class="font-semibold underline decoration-limao decoration-[3px] underline-offset-4">Simule operação de Câmbio</a>
+          </article>
+
+          <article class="group/card flex flex-col items-start gap-3 rounded-2xl border-2 border-t-8 border-preto border-t-limao bg-branco p-8 transition-transform hover:-translate-y-1">
+            <h3 class="font-display text-2xl">Empréstimo</h3>
+            <p class="text-neutral-700">Escolha um valor e veja as condições na hora.</p>
+
+            <fieldset class="w-full">
+              <legend class="sr-only">Valor do empréstimo</legend>
+
+              <div class="grid gap-3 sm:grid-cols-3">
+
+                <div>
+                  <input type="radio" name="valor" id="loan-10k" class="peer sr-only" checked>
+                  <label for="loan-10k" class="block cursor-pointer rounded-xl border-2 border-preto p-3 text-center transition-colors hover:bg-neutral-100 peer-checked:bg-limao peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-preto">
+                    <small class="block text-xs text-neutral-700">Empréstimo de</small>
+                    <strong class="block text-sm">R$ 10.000,00</strong>
+                  </label>
+                </div>
+
+                <div>
+                  <input type="radio" name="valor" id="loan-50k" class="peer sr-only">
+                  <label for="loan-50k" class="block cursor-pointer rounded-xl border-2 border-preto p-3 text-center transition-colors hover:bg-neutral-100 peer-checked:bg-limao peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-preto">
+                    <small class="block text-xs text-neutral-700">Empréstimo de</small>
+                    <strong class="block text-sm">R$ 50.000,00</strong>
+                  </label>
+                </div>
+
+                <div>
+                  <input type="radio" name="valor" id="loan-100k" class="peer sr-only">
+                  <label for="loan-100k" class="block cursor-pointer rounded-xl border-2 border-preto p-3 text-center transition-colors hover:bg-neutral-100 peer-checked:bg-limao peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-preto">
+                    <small class="block text-xs text-neutral-700">Empréstimo de</small>
+                    <strong class="block text-sm">R$ 100.000,00</strong>
+                  </label>
+                </div>
+
+              </div>
+            </fieldset>
+
+            <div class="w-full rounded-xl bg-preto px-4 py-6 text-center text-branco">
+              <div class="hidden group-has-[#loan-10k:checked]/card:block">
+                <p class="text-sm text-cinza">em 12 parcelas de</p>
+                <p class="mt-1 font-display text-3xl font-bold text-limao">R$ 950,00</p>
+              </div>
+              <div class="hidden group-has-[#loan-50k:checked]/card:block">
+                <p class="text-sm text-cinza">em 24 parcelas de</p>
+                <p class="mt-1 font-display text-3xl font-bold text-limao">R$ 2.800,00</p>
+              </div>
+              <div class="hidden group-has-[#loan-100k:checked]/card:block">
+                <p class="text-sm text-cinza">em 48 parcelas de</p>
+                <p class="mt-1 font-display text-3xl font-bold text-limao">R$ 2.900,00</p>
+              </div>
+            </div>
+
+            <a href="emprestimos.html" class="font-semibold underline decoration-limao decoration-[3px] underline-offset-4">Ver mais detalhes</a>
+            <p class="text-xs text-neutral-700">Valores fictícios e ilustrativos, sem validade financeira.</p>
+          </article>
+
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <footer id="contato">
+  <footer id="contato" class="flex flex-wrap items-center justify-between gap-4 border-t border-linha px-[clamp(1.25rem,5vw,4rem)] py-8 text-sm text-cinza">
     <p>&copy; 2026 SAT - Exchange Bank. Todos os direitos reservados.</p>
-    <nav>
-      <ul>
-        <li><a href="#">Termos de uso</a></li>
-        <li><a href="#">Privacidade</a></li>
-        <li><a href="#">Contato</a></li>
+    <nav aria-label="Links do rodapé">
+      <ul class="flex gap-6">
+        <li><a href="#" class="hover:text-limao">Termos de uso</a></li>
+        <li><a href="#" class="hover:text-limao">Privacidade</a></li>
+        <li><a href="#" class="hover:text-limao">Contato</a></li>
       </ul>
     </nav>
   </footer>
