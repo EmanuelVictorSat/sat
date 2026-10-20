@@ -1,54 +1,54 @@
 @import "tailwindcss";
 
 @theme static {
-  --color-preto: #000000;
-  --color-branco: #ffffff;
-  --color-cinza: #a3a3a3;
-  --color-linha: #2a2a2a;
-  --color-limao: #c6f432;
-  --font-display: "Orbitron", sans-serif;
+	--color-preto: #000000;
+	--color-branco: #ffffff;
+	--color-cinza: #a3a3a3;
+	--color-linha: #2a2a2a;
+	--color-limao: #c6f432;
+	--font-display: "Orbitron", sans-serif;
 }
 
 @layer base {
-  :root {
-    /* apelidos usados pelo cambio.css */
-    --preto: var(--color-preto);
-    --branco: var(--color-branco);
-    --cinza: var(--color-cinza);
-    --linha: var(--color-linha);
-    --limao: var(--color-limao);
-    --largura: 72rem;
-    --espaco: clamp(1.25rem, 5vw, 4rem);
-  }
+	:root {
+		/* apelidos usados pelo cambio.css */
+		--preto: var(--color-preto);
+		--branco: var(--color-branco);
+		--cinza: var(--color-cinza);
+		--linha: var(--color-linha);
+		--limao: var(--color-limao);
+		--largura: 72rem;
+		--espaco: clamp(1.25rem, 5vw, 4rem);
+	}
 
-  html {
-    scroll-behavior: smooth;
-  }
+	html {
+		scroll-behavior: smooth;
+	}
 
-  body {
-    background: var(--color-preto);
-    color: var(--color-branco);
-    line-height: 1.6;
-  }
+	body {
+		background: var(--color-preto);
+		color: var(--color-branco);
+		line-height: 1.6;
+	}
 
-  :focus-visible {
-    outline: 2px solid var(--color-limao);
-    outline-offset: 3px;
-  }
+	:focus-visible {
+		outline: 2px solid var(--color-limao);
+		outline-offset: 3px;
+	}
 
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 
-    * {
-      transition: none !important;
-    }
-  }
+		* {
+			transition: none !important;
+		}
+	}
 }
 
 @layer components {
-  .btn {
-    @apply inline-block rounded-full border-2 border-limao bg-limao px-6 py-3 font-semibold text-preto transition-colors hover:bg-transparent hover:text-limao;
-  }
+	.btn {
+		@apply inline-block rounded-full border-2 border-limao bg-limao px-6 py-3 font-semibold text-preto transition-colors hover:bg-transparent hover:text-limao;
+	}
 }

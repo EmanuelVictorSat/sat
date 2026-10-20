@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check": "biome check js css",
+    "format": "biome format --write js css"
   },
   "repository": {
     "type": "git",
