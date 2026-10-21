@@ -6,6 +6,8 @@
 	--color-cinza: #a3a3a3;
 	--color-linha: #2a2a2a;
 	--color-limao: #c6f432;
+	--color-superficie: #0d0d0d;
+	--color-erro: #ff6b6b;
 	--font-display: "Orbitron", sans-serif;
 }
 
@@ -51,4 +53,95 @@
 	.btn {
 		@apply inline-block rounded-full border-2 border-limao bg-limao px-6 py-3 font-semibold text-preto transition-colors hover:bg-transparent hover:text-limao;
 	}
+
+	/* Card escuro com faixa limão no topo (cadastro, login, empréstimos) */
+	.cartao {
+		padding: clamp(1.5rem, 4vw, 2.5rem);
+		border: 1px solid var(--color-linha);
+		border-top: 6px solid var(--color-limao);
+		border-radius: 1.25rem;
+		background: var(--color-superficie);
+	}
+
+	/* Campo de formulário: rótulo + input/select + mensagem de erro */
+	.campo {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+
+	.campo label {
+		color: var(--color-cinza);
+		font-size: 0.85rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+
+	.campo select,
+	.campo input {
+		width: 100%;
+		padding: 0.9rem 1rem;
+		border: 1px solid var(--color-linha);
+		border-radius: 0.75rem;
+		background: var(--color-preto);
+		color: var(--color-branco);
+		color-scheme: dark;
+		font: inherit;
+		font-size: 1.1rem;
+		transition: border-color 0.2s;
+	}
+
+	.campo input::placeholder {
+		color: #8a8a8a;
+	}
+
+	/* select ainda sem escolha (opção vazia) fica com cor de placeholder */
+	.campo select:invalid {
+		color: #8a8a8a;
+	}
+
+	.campo select option {
+		background: var(--color-preto);
+		color: var(--color-branco);
+	}
+
+	/* o JS marca aria-invalid="true" no campo com erro */
+	.campo select[aria-invalid="true"],
+	.campo input[aria-invalid="true"] {
+		border-color: var(--color-erro);
+	}
+
+	.campo select:focus,
+	.campo input:focus {
+		border-color: var(--color-limao);
+		outline: none;
+	}
+
+	.campo-erro {
+		color: var(--color-erro);
+		font-size: 0.85rem;
+	}
+
+	/* Mensagem geral do formulário: .alerta.erro ou .alerta.sucesso */
+	.alerta {
+		padding: 0.9rem 1rem;
+		border: 1px solid var(--color-linha);
+		border-radius: 0.75rem;
+		font-size: 0.95rem;
+	}
+
+	.alerta.erro {
+		border-color: var(--color-erro);
+		color: var(--color-erro);
+	}
+
+	.alerta.sucesso {
+		border-color: var(--color-limao);
+		color: var(--color-limao);
+	}
+}
+
+/* Link da página atual no header. Fica fora de @layer para vencer as utilitárias do Tailwind (text-cinza) */
+header nav a[aria-current="page"] {
+	color: var(--color-limao);
 }

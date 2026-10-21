@@ -10,10 +10,6 @@
 	padding: clamp(3rem, 8vw, 6rem) var(--espaco);
 }
 
-header nav a[aria-current="page"] {
-	color: var(--limao);
-}
-
 /* ---------- Coluna da esquerda ---------- */
 .tag {
 	display: inline-block;
@@ -132,38 +128,6 @@ header nav a[aria-current="page"] {
 .operacao-btn.ativo {
 	background: var(--limao);
 	color: var(--preto);
-}
-
-.campo {
-	display: flex;
-	flex-direction: column;
-	gap: 0.4rem;
-}
-
-.campo label {
-	color: var(--cinza);
-	font-size: 0.85rem;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-}
-
-.campo select,
-.campo input {
-	width: 100%;
-	padding: 0.9rem 1rem;
-	border: 1px solid var(--linha);
-	border-radius: 0.75rem;
-	background: var(--preto);
-	color: var(--branco);
-	font: inherit;
-	font-size: 1.1rem;
-	transition: border-color 0.2s;
-}
-
-.campo select:focus,
-.campo input:focus {
-	border-color: var(--limao);
-	outline: none;
 }
 
 .simulador .btn {
